@@ -19,7 +19,7 @@ function parseUplink(device, payload) {
         var sensor2 = device.endpoints.byAddress("2");
 
         if (sensor2 != null)
-            sensor2.updateIASSensorStatus(decoded.alarm);
+            sensor2.updateIASSensorStatus(decoded.alarm+1);
     };
 
      // Store Status 2
@@ -27,7 +27,7 @@ function parseUplink(device, payload) {
         var sensor3 = device.endpoints.byAddress("3");
 
         if (sensor3 != null)
-            sensor3.updateIASSensorStatus(decoded.alarm1);
+            sensor3.updateIASSensorStatus(decoded.alarm1+1);
     };
 
 }
